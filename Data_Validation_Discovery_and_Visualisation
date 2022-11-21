@@ -1,12 +1,12 @@
-## Data Validation
+##Data Validation
 
 The original <a href="https://github.com/dawsonkate/Data-Validation-Discovery-and-Visualisation/blob/main/claims.csv">data</a> has 98 rows (+1 header) and 8 columns. 
 
 The first thing I did was double check that the claims.csv columns match the dataset description. 
  
  All columns are present. 
-- ClaimID, as expected. 98 unique Claim_id, 98 rows.
-- Time_to_CLose, outlier found. Values from (DESC) 3591 to -57. This column represents the number of days, so it cannot be negative. Need to validate information relating to the row showing '-57'. The second smallest number is 29.
+* ClaimID, as expected. 98 unique Claim_id, 98 rows.
+* Time_to_CLose, outlier found. Values from (DESC) 3591 to -57. This column represents the number of days, so it cannot be negative. Need to validate information relating to the row showing '-57'. The second smallest number is 29.
 - Claim_Amount column looks a bit strange. According to the dataset description it should be converted (“R$50,000.00” should be converted into 50000) so this is what I did. Then I CAST to numeric. Now the column matches the description.
 - Amount_Paid, FLOAT data type. CAST to numeric.
 - Location, as expected. Four possible locations. Data is clean.
